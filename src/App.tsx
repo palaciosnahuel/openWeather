@@ -1,12 +1,9 @@
 import React from 'react';
+import Home from './api/pages/Home';
 import './App.css';
 
-function App() {
-  return (
-    <div>
-      Empty
-    </div>
-  );
+const App = () => {
+  return <Home/>;
 }
 
 export default App;
