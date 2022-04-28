@@ -23,6 +23,8 @@ export interface CurrentWeather {
     feels_like: number
     temp_min: number
     temp_max: number
+    pressure:number
+    humidity:number
   }
   weather: [{
     id: number;

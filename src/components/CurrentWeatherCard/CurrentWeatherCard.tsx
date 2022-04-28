@@ -1,22 +1,30 @@
 import React from 'react'
 import { Box,Flex,Image } from '@chakra-ui/react'
+import { CurrentWeather } from '../../api/openWeather/types';
 
-const CurrentWeatherCard = () => {
+interface CurrentWeatherCardProps {
+  data: CurrentWeather;
+}
+
+const CurrentWeatherCard: React.FC<CurrentWeatherCardProps> = ({data}) => {
   return (
     <Flex  wrap={"wrap"}  justifyContent={"center"} bgGradient='linear(to-r, gray.100, gray.300)' p={5} borderRadius={5} my={1}>
-      <Flex direction={'column'} mx={10}>
-        Buenos Aires
-        <Box>16/10 07:46hs</Box>
-        <Image w={"100px"} h={"100px"} src={`http://openweathermap.org/img/wn/10d@2x.png`} />
-      </Flex>
-      <Flex direction={'column'} justifyContent={"space-between"} mx={10} >
-        <Box>ST 99.99</Box>
-        <Flex>
-          <div>Maxima 99.99</div>
-          <div>Minima 99.99</div>
+      <Flex direction={'column'} mx={10} alignItems={"center"}>
+        {data.name}
+        <Flex alignItems={"center"}>
+        <Image w={"100px"} h={"100px"} src={`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`} />
+        <Box>{data.main.temp}</Box>
         </Flex>
-        <div>Humedad 99.99</div>
-        <div>Presión 99.99</div>
+        {data.weather[0].description}
+      </Flex>
+      <Flex direction={'column'} justifyContent={"center"} mx={10} >
+        <Box>{`ST ${data.main.feels_like}`}</Box>
+        <Flex>
+          <div>{`MX ${data.main.temp_max}`}</div>
+          <div>{`MN ${data.main.temp_min}`}</div>
+        </Flex>
+        <div>{`HMDY ${data.main.humidity}%`}</div>
+        <div>{`PSRE ${data.main.pressure}hpca`}</div>
       </Flex>
     </Flex>
   )
