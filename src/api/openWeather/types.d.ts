@@ -1,8 +1,13 @@
 export interface Forecast {
+ city : {
+   timezone: number
+ }
  list: ForecastItem[]
 }
 
 export interface ForecastItem {
+  timezone:number
+  dt:number
   temp: {
       day: number
       max: number
