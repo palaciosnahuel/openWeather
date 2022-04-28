@@ -1,0 +1,2 @@
+# openWeather
+Exercice using openWeather
