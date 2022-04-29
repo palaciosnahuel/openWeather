@@ -12,10 +12,12 @@ const Home = () => {
   const {data : forecastData, isFetched: forecastIsFetched } = useQuery(["getForecast"], () => getForecast("Buenos Aires"))
 
   return (
-    <Box p={10} mt={"5%"} mx={"20%"} bg={"red.300"} rounded="2xl">
+    <Box p={10} mt={"5%"} mx={"20%"} bg={"blue.800"} rounded="2xl">
+      
       <Flex justifyContent={"center"}>
         {weatherIsFetched ? <CurrentWeatherCard data={weatherData!} /> : <Loader/> } 
       </Flex>
+
       <Flex direction={'row'} justifyContent={"center"} wrap={"wrap"}>
         {
           forecastIsFetched ? forecastData!.list.map( (data)=> {
@@ -24,6 +26,7 @@ const Home = () => {
           }) : <Loader/> 
         }
       </Flex>
+
     </Box>
   )
 }
