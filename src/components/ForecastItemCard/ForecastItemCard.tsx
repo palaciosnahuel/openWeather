@@ -17,7 +17,7 @@ const ForecastItemCard : React.FC<ForecastItemCardProps> = ({data}) => {
     <>
     <Flex bgGradient='linear(to-r, gray.100, gray.300)' margin={2} w={165} direction={'column'} align={"center"} rounded={"lg"}>
       <Box p={5}>
-      <Text align={"center"}>{data.temp.max} / {data.temp.min}</Text>
+      <Text align={"center"}>{Math.round(data.temp.max) + "°"} / {Math.round(data.temp.min)  + "°"}</Text>
       <Text align={"center"} fontWeight={700}  fontSize='xs'>{data.weather[0].description}</Text>
       <Image src={`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`}  w={100} alt={"Complete"} />
       <Text align={"center"}>{date.getDate() + "/"+ date.getMonth()}</Text>
