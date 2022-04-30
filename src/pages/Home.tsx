@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Box, Flex, Button } from '@chakra-ui/react'
+import { Box, Flex, Button, Text } from '@chakra-ui/react'
 import CurrentWeatherCard from '../components/CurrentWeatherCard/CurrentWeatherCard'
 import ForecastItemCard from '../components/ForecastItemCard/ForecastItemCard'
 import { useQuery } from 'react-query';
@@ -53,6 +53,11 @@ const Home = () => {
           })
         }
       </Flex>
+
+      <Flex justifyContent={"center"} mt={5}>
+       <Text fontSize='xs' fontWeight={600} color={"white"}>by Nahuel Palacios</Text>
+      </Flex>
+
     </Box>
   )
 }
