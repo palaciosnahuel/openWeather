@@ -38,3 +38,8 @@ export interface CurrentWeather {
     icon: string;
   }]
 }
+
+export interface GeolocationParameters{
+  lat:number
+  long:number
+}
