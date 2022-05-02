@@ -40,7 +40,7 @@ npm start
 * [React Geolocation](https://www.npmjs.com/package/react-hook-geolocation)
 
 
-## Arquitectura  🔩
+## Notas
 
 Está realizado con **ReactJs** para el renderizado con **Typescript**.
 Se utiliza **React-Query** para consultas https y **ChakraUI** como frammework de css.
