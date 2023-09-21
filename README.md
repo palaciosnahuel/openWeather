@@ -1,6 +1,9 @@
 # OpenWeather Api Exercice.
 Ejercicio realizado con la api de OpenWeather.
 
+Online en :
+https://thriving-sunburst-6c3b2e.netlify.app/
+
 #### Consigna:
 Desarrollar una app full client-side que permita visualizar el pronóstico climático actual y de los
 próximos 5 días en la ubicación actual y permita visualizar el pronóstico de otras 5 ciudades
